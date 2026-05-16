@@ -1,0 +1,11 @@
+imgs/
+node_modules/
+*.txt
+*.js
+*.map
+*.css
+*.css.map
+package.json
+index.html
+!main.js
+!renderer.js
