@@ -33191,11 +33191,12 @@ require("source-map-support/source-map-support.js").install(), module.exports = 
                 nodeIntegration: !0,
                 contextIsolation: !1,
                 webSecurity: !1,
-                devTools: !1
+                devTools: true
             },
             frame: !1,
             transparent: !0
         });
+        
         return i.winType = "start", i.loadURL(pr.mainURL), i.on("closed", () => {
             i = null
         }), i
@@ -33238,10 +33239,11 @@ require("source-map-support/source-map-support.js").install(), module.exports = 
                     nodeIntegration: !0,
                     contextIsolation: !1,
                     webSecurity: !1,
-                    devTools: !1
+                    devTools: true
                 },
                 frame: !1
             });
+            
             return n.winType = "theme", n.loadURL(pr.mainURL + "#/projects?projectName=" + e), n.on("closed", () => {
                 n = null
             }), n
@@ -33257,16 +33259,17 @@ require("source-map-support/source-map-support.js").install(), module.exports = 
                 webPreferences: {
                     nodeIntegration: !0,
                     contextIsolation: !1,
-                    devTools: !1
+                    devTools: true
                 },
                 frame: !1
             });
+            n.webContents.openDevTools();
             return n.winType = "watch", n.loadURL(pr.mainURL + "#/watchindex?projectName=" + e), n.on("closed", () => {
                 n = null
             }), n
         }(e.projectName || "")) : Ml
     }
-    process.argv.findIndex(e => e.includes("inspect")) > -1 && a.app.exit(0), -1 === __filename.indexOf("app.asar") && a.app.exit(0), a.app.on("web-contents-created", (e, t) => {
+    process.argv.findIndex(e => e.includes("inspect")) > -1 && a.app.exit(0), a.app.on("web-contents-created", (e, t) => {
             t.on("new-window", async (e, t) => {
                 e.preventDefault()
             })
