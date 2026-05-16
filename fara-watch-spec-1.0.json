@@ -1,0 +1,3767 @@
+{
+    "watchVersion": {
+        "x.y.z": 3,
+        "type": "Fara"
+    },
+    "specVersion": "3.0.1",
+    "constraint": {
+        "general": {
+            "HWHD07": {
+                "hwtSize": 800,
+                "layer": 25,
+                "optionLayer": 5,
+                "imgSize": 750,
+                "resSize": 4096,
+                "watchSize": {
+                    "width": 286,
+                    "height": 482
+                }
+            }
+        },
+        "customTypes": [
+            {
+                "type": "BASE_INFO",
+                "label_cn": "基础信息",
+                "label_en": "Basic Information"
+            },
+            {
+                "type": "HEALTH",
+                "label_cn": "健康",
+                "label_en": "Health"
+            },
+            {
+                "type": "NATURE",
+                "label_cn": "自然",
+                "label_en": "Nature"
+            }
+        ],
+        "valueTypes": [
+            {
+                "id": "DATA_AMPM",
+                "enum": 50,
+                "label_cn": "上午下午",
+                "label_en": "AMPM",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_AMPM",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "上午",
+                        "下午",
+                        "空白"
+                    ],
+                    "en": [
+                        "am",
+                        "pm",
+                        "blank"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_AM_PM_TEXT",
+                "enum": 233,
+                "label_cn": "AM/PM文本",
+                "label_en": "AM/PM Text",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_AMPM",
+                "type": "Text",
+                "value": {
+                    "cn": [
+                        "AM",
+                        "PM"
+                    ],
+                    "en": [
+                        "AM",
+                        "PM"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_HOUR",
+                "enum": 12,
+                "label_cn": "时钟",
+                "label_en": "Hour",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_HOUR",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 23,
+                    "default": 10
+                }
+            },
+            {
+                "id": "DATA_MINUTE",
+                "enum": 13,
+                "label_cn": "分钟",
+                "label_en": "Minute",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_MINUTE",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 59,
+                    "default": "08"
+                }
+            },
+            {
+                "id": "DATA_SECOND",
+                "enum": 14,
+                "label_cn": "秒钟",
+                "label_en": "Second",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_SECOND",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 59,
+                    "default": 36
+                }
+            },
+            {
+                "id": "DATA_HOUR_HIGH",
+                "enum": 59,
+                "label_cn": "时钟高位",
+                "label_en": "Hour High",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_HOUR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2"
+                    ],
+                    "default": 1
+                }
+            },
+            {
+                "id": "DATA_HOUR_LOW",
+                "enum": 60,
+                "label_cn": "时钟低位",
+                "label_en": "Hour Low",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_HOUR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 0
+                }
+            },
+            {
+                "id": "DATA_MINUTE_HIGH",
+                "enum": 61,
+                "label_cn": "分钟高位",
+                "label_en": "Minute High",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_MINUTE",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "default": 0
+                }
+            },
+            {
+                "id": "DATA_MINUTE_LOW",
+                "enum": 62,
+                "label_cn": "分钟低位",
+                "label_en": "Minute Low",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_MINUTE",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 8
+                }
+            },
+            {
+                "id": "DATA_SECOND_HIGH",
+                "enum": 63,
+                "label_cn": "秒钟高位",
+                "label_en": "Second High",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_SECOND",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "default": 3
+                }
+            },
+            {
+                "id": "DATA_SECOND_LOW",
+                "enum": 64,
+                "label_cn": "秒钟低位",
+                "label_en": "Second Low",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_SECOND",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 6
+                }
+            },
+            {
+                "id": "DATA_HOUR12_RATIO",
+                "enum": 150,
+                "label_cn": "时钟比例12",
+                "label_en": "Hour 12 Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_HOUR",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 83.33
+                }
+            },
+            {
+                "id": "DATA_MINUTE_RATIO",
+                "enum": 153,
+                "label_cn": "分钟比例",
+                "label_en": "Minute Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_MINUTE",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 13.33
+                }
+            },
+            {
+                "id": "DATA_SECOND_RATIO",
+                "enum": 154,
+                "label_cn": "秒钟比例",
+                "label_en": "Second Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_SECOND",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 60
+                }
+            },
+            {
+                "id": "DATA_HOUR24_RATIO",
+                "enum": 151,
+                "label_cn": "时钟比例24",
+                "label_en": "Hour 24 Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_HOUR",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 41.67
+                }
+            },
+            {
+                "id": "DATA_DUAL_AM_PM",
+                "enum": 82,
+                "label_cn": "双时区AMPM",
+                "label_en": "Dual AM PM",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1"
+                    ],
+                    "en": [
+                        "0",
+                        "1"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_DUAL_HOUR",
+                "enum": 24,
+                "label_cn": "双时区时钟",
+                "label_en": "Dual Hour",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 23,
+                    "default": "02"
+                }
+            },
+            {
+                "id": "DATA_DUAL_MINUTE",
+                "enum": 25,
+                "label_cn": "双时区分钟",
+                "label_en": "Dual Minute",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 59,
+                    "default": "08"
+                }
+            },
+            {
+                "id": "DATA_DUAL_HOUR_HIGH",
+                "enum": 80,
+                "label_cn": "双时区时钟高位",
+                "label_en": "Dual Hour High",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2"
+                    ],
+                    "default": 0
+                }
+            },
+            {
+                "id": "DATA_DUAL_HOUR_LOW",
+                "enum": 81,
+                "label_cn": "双时区时钟低位",
+                "label_en": "Dual Hour Low",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 2
+                }
+            },
+            {
+                "id": "DATA_DUAL_MINUTE_HIGH",
+                "enum": 83,
+                "label_cn": "双时区分钟高位",
+                "label_en": "Dual Minute High",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "default": 0
+                }
+            },
+            {
+                "id": "DATA_DUAL_MINUTE_LOW",
+                "enum": 84,
+                "label_cn": "双时区分钟低位",
+                "label_en": "Dual Minute Low",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 8
+                }
+            },
+            {
+                "id": "DATA_DUAL_HOUR12_RATIO",
+                "enum": 164,
+                "label_cn": "双时区时钟比例12",
+                "label_en": "Dual Hour 12",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 16.67
+                }
+            },
+            {
+                "id": "DATA_DUAL_HOUR24_RATIO",
+                "enum": 165,
+                "label_cn": "双时区时钟比例24",
+                "label_en": "Dual Hour 24",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 8.33
+                }
+            },
+            {
+                "id": "DATA_DUAL_MINUTE_RATIO",
+                "enum": 171,
+                "label_cn": "双时区分钟比例",
+                "label_en": "Dual Minute Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 13.33
+                }
+            },
+            {
+                "id": "DATA_DUAL_ZONE_TEXT",
+                "enum": 230,
+                "label_cn": "双时区缩写文本",
+                "label_en": "Dual Zone Text",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Text",
+                "value": {
+                    "cn": [
+                        "LON"
+                    ],
+                    "en": [
+                        "LON"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_DUAL_AM_PM_TEXT",
+                "enum": 234,
+                "label_cn": "双时区AM/PM文本",
+                "label_en": "Dual AM PM Text",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Text",
+                "value": {
+                    "cn": [
+                        "上午",
+                        "下午"
+                    ],
+                    "en": [
+                        "AM",
+                        "PM"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_DUAL_ZONE_TIME_TEXT",
+                "enum": 235,
+                "label_cn": "双时区 时/分文本",
+                "label_en": "Dual Zone + Time",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DUAL_TIME",
+                "type": "Text",
+                "value": {
+                    "cn": [
+                        "LON 02:08"
+                    ],
+                    "en": [
+                        "LON 02:08"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_LUNAR_MONTH",
+                "enum": 92,
+                "label_cn": "农历月份",
+                "label_en": "Lunar Month",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "一月",
+                        "二月",
+                        "三月",
+                        "四月",
+                        "五月",
+                        "六月",
+                        "七月",
+                        "八月",
+                        "九月",
+                        "十月",
+                        "十一月",
+                        "十二月"
+                    ],
+                    "en": [
+                        "January",
+                        "February",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "December"
+                    ],
+                    "default": 9
+                }
+            },
+            {
+                "id": "DATA_LUNAR_DATE_GIGH",
+                "enum": 93,
+                "label_cn": "农历日期高位",
+                "label_en": "Lunar Date High",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "初",
+                        "十",
+                        "廿",
+                        "三",
+                        "二"
+                    ],
+                    "en": [
+                        "初",
+                        "十",
+                        "廿",
+                        "三",
+                        "二"
+                    ],
+                    "default": 1
+                }
+            },
+            {
+                "id": "DATA_LUNAR_DATE_LOW",
+                "enum": 94,
+                "label_cn": "农历日期低位",
+                "label_en": "Lunar Date Low",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "十",
+                        "一",
+                        "二",
+                        "三",
+                        "四",
+                        "五",
+                        "六",
+                        "七",
+                        "八",
+                        "九"
+                    ],
+                    "en": [
+                        "十",
+                        "一",
+                        "二",
+                        "三",
+                        "四",
+                        "五",
+                        "六",
+                        "七",
+                        "八",
+                        "九"
+                    ],
+                    "default": 8
+                }
+            },
+            {
+                "id": "DATA_SOLAR_FIRST_HALF",
+                "enum": 95,
+                "label_cn": "24节气中前12个节气",
+                "label_en": "The first 12 solar terms of the 24 solar terms",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "空白",
+                        "小寒",
+                        "大寒",
+                        "立春",
+                        "雨水",
+                        "惊蛰",
+                        "春分",
+                        "清明",
+                        "谷雨",
+                        "立夏",
+                        "小满",
+                        "芒种",
+                        "夏至"
+                    ],
+                    "en": [
+                        "Blank",
+                        "Slight cold",
+                        "Great cold",
+                        "Spring begins",
+                        "The rains",
+                        "Insects awaken",
+                        "Vernal Equinox",
+                        "Clear and bright",
+                        "Grain rain",
+                        "Summer begins",
+                        "Grain buds",
+                        "Grain in ear",
+                        "Summer solstice"
+                    ],
+                    "default": 3
+                }
+            },
+            {
+                "id": "DATA_SOLAR_LAST_HALF",
+                "enum": 96,
+                "label_cn": "24节气中后12个节气",
+                "label_en": "12 solar terms after 24 solar terms",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "空白",
+                        "小暑",
+                        "大暑",
+                        "立秋",
+                        "处暑",
+                        "白露",
+                        "秋分",
+                        "寒露",
+                        "霜降",
+                        "立冬",
+                        "小雪",
+                        "大雪",
+                        "冬至"
+                    ],
+                    "en": [
+                        "Blank",
+                        "Slight heat",
+                        "Great heat",
+                        "Autumn begins",
+                        "Stopping the heat",
+                        "White dews",
+                        "Autumn Equinox",
+                        "Cold dews",
+                        "Hoar-frost falls",
+                        "Winter begins",
+                        "Light snow",
+                        "Heavy snow",
+                        "Winter Solstice"
+                    ],
+                    "default": 3
+                }
+            },
+            {
+                "id": "DATA_LUNAR_DATE_FIRST_HALF",
+                "enum": 97,
+                "label_cn": "农历在前12个节气中的哪个节气之前",
+                "label_en": "Lunar calendar before Which of the first 12 solar terms",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "空白",
+                        "小寒",
+                        "大寒",
+                        "立春",
+                        "雨水",
+                        "惊蛰",
+                        "春分",
+                        "清明",
+                        "谷雨",
+                        "立夏",
+                        "小满",
+                        "芒种",
+                        "夏至"
+                    ],
+                    "en": [
+                        "Blank",
+                        "Slight cold",
+                        "Great cold",
+                        "Spring begins",
+                        "The rains",
+                        "Insects awaken",
+                        "Vernal Equinox",
+                        "Clear and bright",
+                        "Grain rain",
+                        "Summer begins",
+                        "Grain buds",
+                        "Grain in ear",
+                        "Summer solstice"
+                    ],
+                    "default": 3
+                }
+            },
+            {
+                "id": "DATA_LUNAR_DATE_LAST_HALF",
+                "enum": 98,
+                "label_cn": "农历在后12个节气中的哪个节气之前",
+                "label_en": "Lunar calendar before Which of the last 12 solar terms",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "空白",
+                        "小暑",
+                        "大暑",
+                        "立秋",
+                        "处暑",
+                        "白露",
+                        "秋分",
+                        "寒露",
+                        "霜降",
+                        "立冬",
+                        "小雪",
+                        "大雪",
+                        "冬至"
+                    ],
+                    "en": [
+                        "Blank",
+                        "Slight heat",
+                        "Great heat",
+                        "Autumn begins",
+                        "Stopping the heat",
+                        "White dews",
+                        "Autumn Equinox",
+                        "Cold dews",
+                        "Hoar-frost falls",
+                        "Winter begins",
+                        "Light snow",
+                        "Heavy snow",
+                        "Winter Solstice"
+                    ],
+                    "default": 3
+                }
+            },
+            {
+                "id": "DATA_LUNAR_TWELVE_HOURS",
+                "enum": 99,
+                "label_cn": "12时辰",
+                "label_en": "12 o'clock",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "子",
+                        "丑",
+                        "寅",
+                        "卯",
+                        "辰",
+                        "巳",
+                        "午",
+                        "未",
+                        "申",
+                        "酉",
+                        "戌",
+                        "亥"
+                    ],
+                    "en": [
+                        "child",
+                        "ugly",
+                        "Yin",
+                        "Mao",
+                        "Chen",
+                        "Si",
+                        "Noon",
+                        "not",
+                        "Shen",
+                        "unitary",
+                        "Xu",
+                        "Hai"
+                    ],
+                    "default": 5
+                }
+            },
+            {
+                "id": "DATA_MONTH_TEXT",
+                "enum": 232,
+                "label_cn": "月份文本",
+                "label_en": "Month Text",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_MONTH",
+                "type": "Text",
+                "value": {
+                    "cn": [
+                        "一月",
+                        "二月",
+                        "三月",
+                        "四月",
+                        "五月",
+                        "六月",
+                        "七月",
+                        "八月",
+                        "九月",
+                        "十月",
+                        "十一月",
+                        "十二月"
+                    ],
+                    "en": [
+                        "JAN",
+                        "FEB",
+                        "MAR",
+                        "APR",
+                        "MAY",
+                        "JUN",
+                        "JUL",
+                        "AUG",
+                        "SEP",
+                        "OCT",
+                        "NOV",
+                        "DEC"
+                    ],
+                    "default": 9
+                }
+            },
+            {
+                "id": "DATA_MONTH",
+                "enum": 51,
+                "label_cn": "月",
+                "label_en": "Month",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_MONTH",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10",
+                        "11",
+                        "12"
+                    ],
+                    "en": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10",
+                        "11",
+                        "12"
+                    ],
+                    "default": 9
+                }
+            },
+            {
+                "id": "MONTH_RATIO",
+                "enum": 118,
+                "label_cn": "月份比例",
+                "label_en": "Date Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_MONTH",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_DATE",
+                "enum": 17,
+                "label_cn": "日期",
+                "label_en": "Date",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DATE",
+                "type": "Raw",
+                "value": {
+                    "minNum": 1,
+                    "maxNum": 31,
+                    "default": 18
+                }
+            },
+            {
+                "id": "DATE_YESTERDAY",
+                "enum": 30,
+                "label_cn": "昨天",
+                "label_en": "Date Yesterday",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DATE",
+                "type": "Raw",
+                "value": {
+                    "minNum": 1,
+                    "maxNum": 31
+                }
+            },
+            {
+                "id": "DATE_TOMORROW",
+                "enum": 31,
+                "label_cn": "明天",
+                "label_en": "Date Tomorrow",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DATE",
+                "type": "Raw",
+                "value": {
+                    "minNum": 1,
+                    "maxNum": 31
+                }
+            },
+            {
+                "id": "DATA_DATE_HIGH",
+                "enum": 70,
+                "label_cn": "日期高位",
+                "label_en": "Date High",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DATE",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3"
+                    ],
+                    "default": 1
+                }
+            },
+            {
+                "id": "DATA_DATE_LOW",
+                "enum": 71,
+                "label_cn": "日期低位",
+                "label_en": "Date Low",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DATE",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 8
+                }
+            },
+            {
+                "id": "DATA_DATE_RATIO",
+                "enum": 155,
+                "label_cn": "日期比例",
+                "label_en": "Date Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_DATE",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_WEEK",
+                "enum": 52,
+                "label_cn": "星期数据",
+                "label_en": "Week",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_WEEK",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "周一",
+                        "周二",
+                        "周三",
+                        "周四",
+                        "周五",
+                        "周六",
+                        "周日"
+                    ],
+                    "en": [
+                        "MON",
+                        "TUE",
+                        "WED",
+                        "THU",
+                        "FRI",
+                        "SAT",
+                        "SUN"
+                    ],
+                    "default": 4
+                }
+            },
+            {
+                "id": "DATA_WEEK_RATIO",
+                "enum": 156,
+                "label_cn": "星期比例",
+                "label_en": "Week Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_WEEK",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_WEEK_TEXT",
+                "enum": 231,
+                "label_cn": "星期文本",
+                "label_en": "Week Text",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_WEEK",
+                "type": "Text",
+                "value": {
+                    "cn": [
+                        "周一",
+                        "周二",
+                        "周三",
+                        "周四",
+                        "周五",
+                        "周六",
+                        "周日"
+                    ],
+                    "en": [
+                        "MON",
+                        "TUE",
+                        "WED",
+                        "THU",
+                        "FRI",
+                        "SAT",
+                        "SUN"
+                    ],
+                    "default": 4
+                }
+            },
+            {
+                "id": "DATA_POWER",
+                "enum": 9,
+                "label_cn": "电量",
+                "label_en": "Power",
+                "vmask": 1,
+                "group": "BASE_INFO/BASE_INFO/APP_DATA_TYPE_POWER",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "default": 80
+                }
+            },
+            {
+                "id": "DATA_POWER_ENUM",
+                "enum": 54,
+                "label_cn": "电量枚举",
+                "label_en": "Power Enum",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_POWER",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%"
+                    ],
+                    "en": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%"
+                    ],
+                    "default": 8
+                }
+            },
+            {
+                "id": "DATA_POWER_RATIO",
+                "enum": 163,
+                "label_cn": "电量比例",
+                "label_en": "Power Ratio",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_POWER",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 80
+                }
+            },
+            {
+                "id": "DATA_POWER_STATUS_ENUM",
+                "enum": 243,
+                "label_cn": "电量充电电量枚举",
+                "label_en": "Power Enum",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_POWER",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%",
+                        "充电0%",
+                        "充电10%",
+                        "充电20%",
+                        "充电30%",
+                        "充电40%",
+                        "充电50%",
+                        "充电60%",
+                        "充电70%",
+                        "充电80%",
+                        "充电90%",
+                        "充电100%"
+                    ],
+                    "en": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%",
+                        "Charging 0%",
+                        "Charging 10%",
+                        "Charging 20%",
+                        "Charging 30%",
+                        "Charging 40%",
+                        "Charging 50%",
+                        "Charging 60%",
+                        "Charging 70%",
+                        "Charging 80%",
+                        "Charging 90%",
+                        "Charging 100%"
+                    ],
+                    "default": 8
+                }
+            },
+            {
+                "id": "DATA_UNREADMSG_STATE",
+                "enum": 72,
+                "label_cn": "未读消息",
+                "label_en": "UnreadMsg State",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_UNREADMSG",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "无未读消息",
+                        "有未读消息"
+                    ],
+                    "en": [
+                        "No unread messages",
+                        "There are unread messages"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_CHANGE_BACKGROUND",
+                "enum": 86,
+                "label_cn": "背景切换",
+                "label_en": "Change Background",
+                "vmask": 1,
+                "group": "BASE_INFO/APP_DATA_TYPE_CHANGE_BACKGROUND",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_STEPS",
+                "enum": 0,
+                "label_cn": "步数",
+                "label_en": "Steps",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STEPS",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 65535,
+                    "default": 7645
+                }
+            },
+            {
+                "id": "DATA_STEPS_ONE",
+                "enum": 65,
+                "label_cn": "步数个位",
+                "label_en": "Steps One",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STEPS",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 5
+                }
+            },
+            {
+                "id": "DATA_STEPS_TWO",
+                "enum": 66,
+                "label_cn": "步数十位",
+                "label_en": "Steps Two",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STEPS",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 4
+                }
+            },
+            {
+                "id": "DATA_STEPS_THREE",
+                "enum": 67,
+                "label_cn": "步数百位",
+                "label_en": "Steps Three",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STEPS",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 6
+                }
+            },
+            {
+                "id": "DATA_STEPS_FOUR",
+                "enum": 68,
+                "label_cn": "步数千位",
+                "label_en": "Steps Four",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STEPS",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 7
+                }
+            },
+            {
+                "id": "DATA_STEPS_FIVE",
+                "enum": 69,
+                "label_cn": "步数万位",
+                "label_en": "Steps Five",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STEPS",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 0
+                }
+            },
+            {
+                "id": "DATA_STEPS_RATIO",
+                "enum": 161,
+                "label_cn": "步数目标达成度",
+                "label_en": "Steps Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STEPS",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 76
+                }
+            },
+            {
+                "id": "DATA_STEPS_SELECT_RATIO",
+                "enum": 239,
+                "label_cn": "步数进度选图",
+                "label_en": "Steps Select Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STEPS",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%"
+                    ],
+                    "en": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_HEARTRATE",
+                "enum": 2,
+                "label_cn": "心率",
+                "label_en": "Heart Rate",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_HEARTRATE",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 255,
+                    "default": 97
+                }
+            },
+            {
+                "id": "DATA_HEARTRATE_MAX",
+                "enum": 18,
+                "label_cn": "最大心率",
+                "label_en": "Heart Rate Max",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_HEARTRATE",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 255
+                }
+            },
+            {
+                "id": "DATA_HEARTRATE_MIN",
+                "enum": 19,
+                "label_cn": "最小心率",
+                "label_en": "Heart Rate Min",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_HEARTRATE",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 255
+                }
+            },
+            {
+                "id": "DATA_HEARTRATE_ZONE",
+                "enum": 74,
+                "label_cn": "心率区间",
+                "label_en": "Heart Rate Zone",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_HEARTRATE",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "95~112",
+                        "113~131",
+                        "132~150",
+                        "151~169",
+                        "170~189"
+                    ],
+                    "en": [
+                        "95~112",
+                        "113~131",
+                        "132~150",
+                        "151~169",
+                        "170~189"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_HEARTRATE_RATIO",
+                "enum": 157,
+                "label_cn": "心率比例",
+                "label_en": "Heart Rate Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_HEARTRATE",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_CALORIE",
+                "enum": 1,
+                "label_cn": "卡路里",
+                "label_en": "Calorie",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_CALORIES",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 65535
+                }
+            },
+            {
+                "id": "DATA_CALORIE_RATIO",
+                "enum": 158,
+                "label_cn": "卡路里比例",
+                "label_en": "Calorie Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_CALORIES",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_STANDUPTIMES",
+                "enum": 15,
+                "label_cn": "站立次数",
+                "label_en": "Standup Times",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STANDUPTIMES",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 255,
+                    "default": 12
+                }
+            },
+            {
+                "id": "DATA_VO2MAX",
+                "enum": 16,
+                "label_cn": "最大摄氧量",
+                "label_en": "Vo2max",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_VO2MAX",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 80,
+                    "default": 58
+                }
+            },
+            {
+                "id": "DATA_VO2MAX_RATIO",
+                "enum": 162,
+                "label_cn": "最大摄氧量比例",
+                "label_en": "Vo2max Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_VO2MAX",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_STANDUPTIMES_RATIO",
+                "enum": 159,
+                "label_cn": "站立次数比例",
+                "label_en": "Standup Times Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STANDUPTIMES",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_STANDUPTIMES_SELECT_RATIO",
+                "enum": 240,
+                "label_cn": "站立次数进度选图",
+                "label_en": "Standup Times Select Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STANDUPTIMES",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%"
+                    ],
+                    "en": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_STRESS",
+                "enum": 26,
+                "label_cn": "压力",
+                "label_en": "Stress",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STRESS",
+                "type": "Raw",
+                "value": {
+                    "minNum": 1,
+                    "maxNum": 99,
+                    "default": 45
+                }
+            },
+            {
+                "id": "STRESS_LEVEL_TYPE",
+                "enum": 117,
+                "label_cn": "压力等级",
+                "label_en": "Stress Level Type",
+                "vmask": 8,
+                "group": "HEALTH/APP_DATA_TYPE_STRESS",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "放松",
+                        "正常",
+                        "中等",
+                        "偏高",
+                        "无数据"
+                    ],
+                    "en": [
+                        "relex",
+                        "normal",
+                        "medium",
+                        "upper",
+                        "No data"
+                    ]
+                }
+            },
+            {
+                "id": "SELECT_RES_SUN_RISE_SET",
+                "enum": 119,
+                "label_cn": "日出日落选图",
+                "label_en": "Sunrise and sunset selection",
+                "vmask": 8,
+                "group": "BASE_INFO/APP_DATA_TYPE_SUNRISE_SUNSET",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "日出",
+                        "日落"
+                    ],
+                    "en": [
+                        "Sunrise",
+                        "Sunset"
+                    ]
+                }
+            },
+            {
+                "id": "DATE_SUNRISESET_HOUR_HIGH",
+                "enum": 135,
+                "label_cn": "日出日落时钟的高位",
+                "label_en": "Sunrise/sunset time hour high",
+                "vmask": 8,
+                "group": "BASE_INFO/APP_DATA_TYPE_SUNRISE_SUNSET",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2"
+                    ],
+                    "default": 0
+                }
+            },
+            {
+                "id": "DATE_SUNRISESET_HOUR_LOW",
+                "enum": 136,
+                "label_cn": "日出日落时钟的低位",
+                "label_en": "Sunrise/sunset time hour high",
+                "vmask": 8,
+                "group": "BASE_INFO/APP_DATA_TYPE_SUNRISE_SUNSET",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 6
+                }
+            },
+
+            {
+                "id": "DATE_SUNRISESET_MINUTES_HIGH",
+                "enum": 137,
+                "label_cn": "日出日落分钟的高位",
+                "label_en": "Sunrise/sunset time minutes high",
+                "vmask": 8,
+                "group": "BASE_INFO/APP_DATA_TYPE_SUNRISE_SUNSET",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "default": 0
+                }
+            },
+            {
+                "id": "DATE_SUNRISESET_MINUTES_LOW",
+                "enum": 138,
+                "label_cn": "日出日落分钟的低位",
+                "label_en": "Sunrise/sunset time minutes low",
+                "vmask": 8,
+                "group": "BASE_INFO/APP_DATA_TYPE_SUNRISE_SUNSET",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "en": [
+                        "0",
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9"
+                    ],
+                    "default": 8
+                }
+            },
+            {
+                "id": "STRESS_RATIO",
+                "enum": 172,
+                "label_cn": "压力比例",
+                "label_en": "Stress Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STRESS",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "SLEEP_TEXT",
+                "enum": 142,
+                "label_cn": "睡眠文本",
+                "label_en": "Sleep Text",
+                "vmask": 8,
+                "group": "HEALTH/APP_DATA_TYPE_SLEEP",
+                "type": "Text",
+                "value": {
+                    "cn": [
+                        "6h30m",
+                        "7h30m",
+                        "8h30m"
+                    ],
+                    "en": [
+                        "6h30m",
+                        "7h30m",
+                        "8h30m"
+                    ],
+                    "default": 1
+                }
+            },
+            {
+                "id": "SLEEP_BAR",
+                "enum": 143,
+                "label_cn": "睡眠比例",
+                "label_en": "Sleep Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_SLEEP",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DISTANCE_TEXT",
+                "enum": 146,
+                "label_cn": "距离文本",
+                "label_en": "Distance Text",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_DISTANCE",
+                "type": "Text",
+                "value": {
+                    "cn": [
+                        "1.66",
+                        "2.66",
+                        "3.66",
+                        "4.66",
+                        "5.66"
+                    ],
+                    "en": [
+                        "1.66",
+                        "2.66",
+                        "3.66",
+                        "4.66",
+                        "5.66"
+                    ],
+                    "default": 2
+                }
+            },
+            {
+                "id": "DATA_STRENTHTIME",
+                "enum": 3,
+                "label_cn": "中高强度时间",
+                "label_en": "Strength Time",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STRENTHTIME",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 65535,
+                    "default": 26
+                }
+            },
+            {
+                "id": "DATA_STRENTHTIME_RATIO",
+                "enum": 160,
+                "label_cn": "中高强度时间比例",
+                "label_en": "Strength Time Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STRENTHTIME",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%",
+                    "default": 1.81
+                }
+            },
+            {
+                "id": "DATA_STRENTHTIME_SELECT_RATIO",
+                "enum": 241,
+                "label_cn": "中高强度进度选图",
+                "label_en": "Strength Time Select Ratio",
+                "vmask": 1,
+                "group": "HEALTH/APP_DATA_TYPE_STRENTHTIME",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%"
+                    ],
+                    "en": [
+                        "0%",
+                        "10%",
+                        "20%",
+                        "30%",
+                        "40%",
+                        "50%",
+                        "60%",
+                        "70%",
+                        "80%",
+                        "90%",
+                        "100%"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_TEMPERATURE",
+                "enum": 4,
+                "label_cn": "气温",
+                "label_en": "Temperature",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "Raw",
+                "value": {
+                    "minNum": -127,
+                    "maxNum": 127,
+                    "default": 24
+                }
+            },
+            {
+                "id": "DATA_TEMPERATURE_MAX",
+                "enum": 20,
+                "label_cn": "最高温度",
+                "label_en": "Temperature Max",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "Raw",
+                "value": {
+                    "minNum": -127,
+                    "maxNum": 127,
+                    "default": 36
+                }
+            },
+            {
+                "id": "DATA_TEMPERATURE_MIN",
+                "enum": 21,
+                "label_cn": "最低温度",
+                "label_en": "Temperature Min",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "Raw",
+                "value": {
+                    "minNum": -127,
+                    "maxNum": 127,
+                    "default": -10
+                }
+            },
+            {
+                "id": "TEMPERATURE_MINUS_ONE",
+                "enum": 27,
+                "label_cn": "当前温度减一",
+                "label_en": "Temperature Minus One",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "Raw",
+                "value": {
+                    "minNum": -127,
+                    "maxNum": 126
+                }
+            },
+            {
+                "id": "TEMPERATURE_PLUS_ONE",
+                "enum": 28,
+                "label_cn": "当前温度加一",
+                "label_en": "Temperature Plus One",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "Raw",
+                "value": {
+                    "minNum": -126,
+                    "maxNum": 127
+                }
+            },
+            {
+                "id": "DATA_WEATHERTYPE",
+                "enum": 53,
+                "label_cn": "天气类型",
+                "label_en": "Weather Type",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "未知天气图标请用云中带问号设计",
+                        "晴天白天",
+                        "晴天晚上",
+                        "阴天",
+                        "多云",
+                        "雨",
+                        "雷雨",
+                        "雪",
+                        "沙尘暴",
+                        "晴天雾",
+                        "阴天雾"
+                    ],
+                    "en": [
+                        "unkown",
+                        "sunny_day ",
+                        "sunny_night",
+                        "overcast",
+                        "cloudy",
+                        "rain",
+                        "thunder",
+                        "snow",
+                        "dust_storm",
+                        "hazy",
+                        "fog"
+                    ],
+                    "default": 4
+                }
+            },
+            {
+                "id": "DATA_TEMPERATURE_TYPE",
+                "enum": 73,
+                "label_cn": "温度类型",
+                "label_en": "Temperature Type",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "摄氏度",
+                        "华氏度"
+                    ],
+                    "en": [
+                        "centigrade",
+                        "Fahrenheit degree"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_TEMPERATURE_RATIO",
+                "enum": 167,
+                "label_cn": "温度比例",
+                "label_en": "Temperature Ratio",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_AQI",
+                "enum": 6,
+                "label_cn": "AQI",
+                "label_en": "AQI",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_AQI",
+                "type": "Raw",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 500,
+                    "default": 58
+                }
+            },
+            {
+                "id": "DATA_POLLUTION",
+                "enum": 85,
+                "label_cn": "AQI等级",
+                "label_en": "AQI Pollution Level",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_AQI",
+                "type": "Enum",
+                "value": {
+                    "cn": [
+                        "0-50",
+                        "51-100",
+                        "101-150",
+                        "151-200",
+                        "201-300",
+                        ">300"
+                    ],
+                    "en": [
+                        "0-50",
+                        "51-100",
+                        "101-150",
+                        "151-200",
+                        "201-300",
+                        ">300"
+                    ]
+                }
+            },
+            {
+                "id": "DATA_AQI_RATIO",
+                "enum": 168,
+                "label_cn": "AQI比例",
+                "label_en": "AQI Ratio",
+                "vmask": 1,
+                "group": "NATURE/APP_DATA_TYPE_AQI",
+                "type": "Ratio",
+                "value": {
+                    "minNum": 0,
+                    "maxNum": 100,
+                    "step": 0.01,
+                    "unit": "%"
+                }
+            },
+            {
+                "id": "DATA_NULL",
+                "enum": 255,
+                "label_cn": "无数据",
+                "label_en": "Null",
+                "vmask": 1,
+                "group": "APP_DATA_TYPE_EMPTY",
+                "type": "Text",
+                "value": {
+                    "cn": null,
+                    "en": null
+                }
+            }
+        ],
+        "drawTypes": [
+            {
+                "id": "singleRes",
+                "type": "singleRes",
+                "drawType": 1,
+                "label_cn": "单图",
+                "label_en": "Single Res",
+                "vmask": 0,
+                "group": "static",
+                "valueTypes": null,
+                "properties": {
+                    "index": 0,
+                    "resName": [],
+                    "$path": {
+                        "resName": []
+                    },
+                    "resPosition": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            },
+            {
+                "id": "selectedRes",
+                "type": "selectedRes",
+                "drawType": 2,
+                "label_cn": "选图",
+                "label_en": "Selected Res",
+                "vmask": 0,
+                "group": "images",
+                "valueTypes": [
+                    51,
+                    70,
+                    71,
+                    88,
+                    89,
+                    90,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    92,
+                    52,
+                    50,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                    93,
+                    94,
+                    54,
+                    72,
+                    86,
+                    85,
+                    53,
+                    73,
+                    74,
+                    116,
+                    117,
+                    239,
+                    240,
+                    241,
+                    243
+                ],
+                "properties": {
+                    "index": 0,
+                    "resName": [],
+                    "$path": {
+                        "resName": []
+                    },
+                    "resPosition": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "valueType": null
+                }
+            },
+            {
+                "id": "combinedRes",
+                "type": "combinedRes",
+                "drawType": 3,
+                "label_cn": "组合图",
+                "label_en": "Combined Res",
+                "vmask": 0,
+                "group": "images",
+                "valueTypes": [
+                    17,
+                    30,
+                    31,
+                    9,
+                    0,
+                    2,
+                    18,
+                    19,
+                    1,
+                    3,
+                    16,
+                    15,
+                    12,
+                    13,
+                    14,
+                    24,
+                    25,
+                    26,
+                    6,
+                    4,
+                    20,
+                    21,
+                    51
+                ],
+                "properties": {
+                    "index": 0,
+                    "resName": [],
+                    "$path": {
+                        "resName": [],
+                        "resNameDefault": [],
+                        "resNameSign": []
+                    },
+                    "resPosition": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "alignType": "left",
+                    "valueType": null
+                }
+            },
+            {
+                "id": "text",
+                "type": "text",
+                "drawType": 0,
+                "label_cn": "文本",
+                "label_en": "Text",
+                "vmask": 0,
+                "group": "text",
+                "valueTypes": [
+                    17,
+                    30,
+                    31,
+                    236,
+                    237,
+                    231,
+                    233,
+                    9,
+                    0,
+                    2,
+                    18,
+                    19,
+                    1,
+                    3,
+                    16,
+                    15,
+                    12,
+                    13,
+                    14,
+                    24,
+                    25,
+                    26,
+                    6,
+                    4,
+                    20,
+                    21,
+                    51,
+                    142,
+                    146,
+                    230
+                ],
+                "properties": {
+                    "index": 0,
+                    "rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 50,
+                        "height": 50
+                    },
+                    "textColor": "#FFFFFFFF",
+                    "fontType": 150,
+                    "alignType": "center",
+                    "valueType": null
+                }
+            },
+            {
+                "id": "textTwowild",
+                "type": "textTwowild",
+                "drawType": 10,
+                "label_cn": "连接文本",
+                "label_en": "TextTwowild",
+                "vmask": 0,
+                "group": "text",
+                "valueTypes": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    6,
+                    9,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    24,
+                    25,
+                    26,
+                    30,
+                    31,
+                    255,
+                    142,
+                    51,
+                    230
+                ],
+                "properties": {
+                    "index": 0,
+                    "rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 50,
+                        "height": 50
+                    },
+                    "textColor": "#FFFFFFFF",
+                    "fontType": 150,
+                    "alignType": "left",
+                    "connectType": 5,
+                    "valueTypeone": null,
+                    "valueTypetwo": null
+                }
+            },
+            {
+                "id": "lineRes",
+                "type": "lineRes",
+                "drawType": 6,
+                "label_cn": "直线图",
+                "label_en": "Line Res",
+                "vmask": 0,
+                "group": "ratio_image",
+                "valueTypes": [
+                    118,
+                    143,
+                    155,
+                    156,
+                    150,
+                    151,
+                    153,
+                    154,
+                    164,
+                    165,
+                    171,
+                    163,
+                    161,
+                    157,
+                    158,
+                    160,
+                    162,
+                    159,
+                    172,
+                    168,
+                    167
+                    
+                ],
+                "properties": {
+                    "index": 0,
+                    "resName": [],
+                    "$path": {
+                        "resName": []
+                    },
+                    "rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 50,
+                        "height": 50
+                    },
+                    "valueType": null
+                }
+            },
+            {
+                "id": "arcRes",
+                "type": "arcRes",
+                "drawType": 7,
+                "label_cn": "弧形图",
+                "label_en": "Arc Res",
+                "vmask": 0,
+                "group": "ratio_image",
+                "valueTypes": [
+                    118,
+                    143,
+                    155,
+                    156,
+                    150,
+                    151,
+                    153,
+                    154,
+                    164,
+                    165,
+                    171,
+                    163,
+                    161,
+                    157,
+                    158,
+                    160,
+                    162,
+                    159,
+                    172,
+                    168,
+                    167
+                ],
+                "properties": {
+                    "index": 0,
+                    "resName": [],
+                    "$path": {
+                        "resName": []
+                    },
+                    "rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 50,
+                        "height": 50
+                    },
+                    "centerPoint": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "radius": 50,
+                    "lineWidth": 10,
+                    "startAngle": 0,
+                    "endAngle": 360,
+                    "valueType": null
+                }
+            },
+            {
+                "id": "handRes",
+                "type": "handRes",
+                "drawType": 5,
+                "label_cn": "指针",
+                "label_en": "Hand Res",
+                "vmask": 0,
+                "group": "hand_res",
+                "valueTypes": [
+                    118,
+                    143,
+                    155,
+                    156,
+                    150,
+                    151,
+                    153,
+                    154,
+                    164,
+                    165,
+                    171,
+                    163,
+                    161,
+                    157,
+                    158,
+                    160,
+                    162,
+                    159,
+                    172,
+                    168,
+                    167
+                    
+                ],
+                "properties": {
+                    "index": 0,
+                    "resName": [],
+                    "$path": {
+                        "resName": []
+                    },
+                    "rect": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 50,
+                        "height": 50
+                    },
+                    "centerPoint": {
+                        "x": 6,
+                        "y": 60
+                    },
+                    "startAngle": 0,
+                    "endAngle": 360,
+                    "valueType": null
+                }
+            }
+        ],
+        "dataTypes": [
+            {
+                "id": "APP_DATA_TYPE_AMPM",
+                "type": "APP_DATA_TYPE_AMPM",
+                "enum": 3,
+                "vmask": 5,
+                "label_cn": "上午下午",
+                "label_en": "AMPM",
+                "drawTypes": [
+                    "selectedRes",
+                    "text"
+                ],
+                "valueTypes": [
+                    50,
+                    233
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_HOUR",
+                "type": "APP_DATA_TYPE_HOUR",
+                "enum": 4,
+                "vmask": 5,
+                "label_cn": "小时",
+                "label_en": "Hour",
+                "drawTypes": [
+                    "selectedRes",
+                    "text",
+                    "textTwowild",
+                    "handRes",
+                    "line",
+                    "arc"
+                ],
+                "valueTypes": [
+                    12,
+                    56,
+                    59,
+                    60,
+                    150,
+                    151
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_MINUTE",
+                "type": "APP_DATA_TYPE_MINUTE",
+                "enum": 5,
+                "vmask": 5,
+                "label_cn": "分钟",
+                "label_en": "Minute",
+                "drawTypes": [
+                    "selectedRes",
+                    "text",
+                    "textTwowild",
+                    "handRes",
+                    "line",
+                    "arc"
+                ],
+                "valueTypes": [
+                    13,
+                    61,
+                    62,
+                    153
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_SECOND",
+                "type": "APP_DATA_TYPE_SECOND",
+                "enum": 6,
+                "vmask": 5,
+                "label_cn": "秒",
+                "label_en": "Second",
+                "drawTypes": [
+                    "selectedRes",
+                    "text",
+                    "textTwowild",
+                    "handRes",
+                    "line",
+                    "arc"
+                ],
+                "valueTypes": [
+                    14,
+                    63,
+                    64,
+                    154
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_DUAL_TIME",
+                "type": "APP_DATA_TYPE_DUAL_TIME",
+                "enum": 8,
+                "vmask": 5,
+                "label_cn": "双时区",
+                "label_en": "Dual Time",
+                "drawTypes": [
+                    "selectedRes",
+                    "text",
+                    "textTwowild",
+                    "handRes",
+                    "lineRes",
+                    "arcRes"
+                ],
+                "valueTypes": [
+                    24,
+                    25,
+                    76,
+                    77,
+                    78,
+                    79,
+                    80,
+                    81,
+                    82,
+                    83,
+                    84,
+                    164,
+                    165,
+                    171,
+                    230
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_MONTH",
+                "type": "APP_DATA_TYPE_MONTH",
+                "enum": 0,
+                "vmask": 5,
+                "label_cn": "月份",
+                "label_en": "Month",
+                "drawTypes": [
+                    "handRes",
+                    "lineRes",
+                    "arcRes"
+                ],
+                "valueTypes": [
+                    51,
+                    118
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_DATE",
+                "type": "APP_DATA_TYPE_DATE",
+                "enum": 1,
+                "vmask": 5,
+                "label_cn": "日期",
+                "label_en": "Date",
+                "drawTypes": [
+                    "text",
+                    "selectedRes",
+                    "handRes",
+                    "textTwowild",
+                    "lineRes",
+                    "arcRes",
+                    "combinedRes"
+                ],
+                "valueTypes": [
+                    17,
+                    30,
+                    31,
+                    70,
+                    71,
+                    88,
+                    89,
+                    90,
+                    92,
+                    155,
+                    236,
+                    237,
+                    51,
+                    116
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_WEEK",
+                "type": "APP_DATA_TYPE_WEEK",
+                "enum": 2,
+                "vmask": 5,
+                "label_cn": "星期",
+                "label_en": "Week",
+                "drawTypes": [
+                    "selectedRes",
+                    "handRes",
+                    "lineRes",
+                    "arcRes",
+                    "text"
+                ],
+                "valueTypes": [
+                    52,
+                    156,
+                    231
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_POWER",
+                "type": "APP_DATA_TYPE_POWER",
+                "enum": 17,
+                "vmask": 5,
+                "label_cn": "电量",
+                "label_en": "Power",
+                "drawTypes": [
+                    "selectedRes",
+                    "text",
+                    "handRes",
+                    "lineRes",
+                    "arcRes",
+                    "textTwowild",
+                    "combinedRes"
+                ],
+                "valueTypes": [
+                    9,
+                    54,
+                    163,
+                    243
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_UNREADMSG",
+                "type": "APP_DATA_TYPE_UNREADMSG",
+                "enum": 18,
+                "vmask": 5,
+                "label_cn": "未读信息数量",
+                "label_en": "Unread Msg",
+                "drawTypes": [
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                    72
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_CHANGE_BACKGROUND",
+                "type": "APP_DATA_TYPE_CHANGE_BACKGROUND",
+                "enum": 19,
+                "vmask": 5,
+                "label_cn": "背景",
+                "label_en": "Change Background",
+                "drawTypes": [
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                    86
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_SUNRISE_SUNSET",
+                "type": "APP_DATA_TYPE_SUNRISE_SUNSET",
+                "enum": 9,
+                "vmask": 5,
+                "label_cn": "日出日落时间",
+                "label_en": "Sunrise Sunset",
+                "drawTypes": [
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_STEPS",
+                "type": "APP_DATA_TYPE_STEPS",
+                "enum": 10,
+                "vmask": 5,
+                "label_cn": "步数",
+                "label_en": "Steps",
+                "drawTypes": [
+                    "selectedRes",
+                    "text",
+                    "textTwowild",
+                    "handRes",
+                    "line",
+                    "arc",
+                    "lineRes",
+                    "arcRes",
+                    "combinedRes"
+                ],
+                "valueTypes": [
+                    0,
+                    65,
+                    66,
+                    67,
+                    68,
+                    69,
+                    161,
+                    239,
+                    512
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_HEARTRATE",
+                "type": "APP_DATA_TYPE_HEARTRATE",
+                "enum": 11,
+                "vmask": 5,
+                "label_cn": "心率",
+                "label_en": "Heart Rate",
+                "drawTypes": [
+                    "text",
+                    "handRes",
+                    "line",
+                    "arc",
+                    "lineRes",
+                    "arcRes",
+                    "textTwowild",
+                    "combinedRes",
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                    2,
+                    18,
+                    19,
+                    74,
+                    157,
+                    513
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_CALORIES",
+                "type": "APP_DATA_TYPE_CALORIES",
+                "enum": 12,
+                "vmask": 5,
+                "label_cn": "卡路里",
+                "label_en": "Calories",
+                "drawTypes": [
+                    "text",
+                    "combinedRes",
+                    "handRes",
+                    "line",
+                    "arc",
+                    "lineRes",
+                    "arcRes",
+                    "textTwowild"
+                ],
+                "valueTypes": [
+                    1,
+                    158,
+                    514
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_STANDUPTIMES",
+                "type": "APP_DATA_TYPE_STANDUPTIMES",
+                "enum": 15,
+                "vmask": 5,
+                "label_cn": "站立次数",
+                "label_en": "Standup Times",
+                "drawTypes": [
+                    "text",
+                    "handRes",
+                    "lineRes",
+                    "arcRes",
+                    "textTwowild",
+                    "combinedRes",
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                    15,
+                    159,
+                    240
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_VO2MAX",
+                "type": "APP_DATA_TYPE_VO2MAX",
+                "enum": 14,
+                "label_cn": "最大摄氧量",
+                "label_en": "Vo2max",
+                "drawTypes": [
+                    "text",
+                    "textTwowild",
+                    "combinedRes",
+                    "handRes",
+                    "lineRes",
+                    "arcRes"
+                ],
+                "valueTypes": [
+                    16,
+                    162
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_STRESS",
+                "type": "APP_DATA_TYPE_STRESS",
+                "enum": 16,
+                "vmask": 5,
+                "label_cn": "压力",
+                "label_en": "Stress",
+                "drawTypes": [
+                    "text",
+                    "handRes",
+                    "lineRes",
+                    "arcRes",
+                    "textTwowild",
+                    "combinedRes",
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                    26,
+                    117,
+                    172
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_STRENTHTIME",
+                "type": "APP_DATA_TYPE_STRENTHTIME",
+                "enum": 13,
+                "vmask": 5,
+                "label_cn": "中高强度时间",
+                "label_en": "Strength Time",
+                "drawTypes": [
+                    "text",
+                    "handRes",
+                    "line",
+                    "arc",
+                    "lineRes",
+                    "arcRes",
+                    "textTwowild",
+                    "combinedRes",
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                    3,
+                    160,
+                    241
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_WEATHER_TYPE",
+                "type": "APP_DATA_TYPE_WEATHER_TYPE",
+                "enum": 21,
+                "vmask": 5,
+                "label_cn": "天气",
+                "label_en": "Weather Type",
+                "drawTypes": [
+                    "selectedRes",
+                    "combinedRes",
+                    "text",
+                    "line",
+                    "arc",
+                    "textTwowild"
+                ],
+                "valueTypes": [
+                    4,
+                    20,
+                    21,
+                    53,
+                    73,
+                    167
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_AQI",
+                "type": "APP_DATA_TYPE_AQI",
+                "enum": 20,
+                "vmask": 5,
+                "label_cn": "空气质量",
+                "label_en": "AQI",
+                "drawTypes": [
+                    "selectedRes",
+                    "text",
+                    "textTwowild",
+                    "handRes",
+                    "lineRes",
+                    "arcRes",
+                    "combinedRes"
+                ],
+                "valueTypes": [
+                    6,
+                    85,
+                    168
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_EMPTY",
+                "type": "APP_DATA_TYPE_EMPTY",
+                "enum": 255,
+                "vmask": 5,
+                "label_cn": "无数据",
+                "label_en": "Empty",
+                "drawTypes": null,
+                "valueTypes": [
+                    255
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_DISTANCE",
+                "type": "APP_DATA_TYPE_DISTANCE",
+                "enum": 24,
+                "vmask": 7,
+                "label_cn": "距离",
+                "label_en": "Distance",
+                "drawTypes": [
+                    "singleRes",
+                    "text"
+                ],
+                "valueTypes": [
+                    146
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_SLEEP",
+                "type": "APP_DATA_TYPE_SLEEP",
+                "enum": 25,
+                "vmask": 7,
+                "label_cn": "睡眠",
+                "label_en": "Sleep",
+                "drawTypes": [
+                    "singleRes",
+                    "text",
+                    "textTwowild",
+                    "handRes",
+                    "lineRes",
+                    "arcRes"
+                ],
+                "valueTypes": [
+                    142,
+                    143
+                ]
+            },
+            {
+                "id": "APP_DATA_TYPE_WORKOUT",
+                "type": "APP_DATA_TYPE_WORKOUT",
+                "enum": 26,
+                "vmask": 7,
+                "label_cn": "锻炼",
+                "label_en": "Workout",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_PAY",
+                "type": "APP_DATA_TYPE_PAY",
+                "enum": 27,
+                "vmask": 7,
+                "label_cn": "支付宝",
+                "label_en": "Pay",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_ALARM_CLOCK",
+                "type": "APP_DATA_TYPE_ALARM_CLOCK",
+                "enum": 28,
+                "vmask": 7,
+                "label_cn": "闹钟",
+                "label_en": "Alarm Clock",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_STOPWATCH",
+                "type": "APP_DATA_TYPE_STOPWATCH",
+                "enum": 29,
+                "vmask": 7,
+                "label_cn": "秒表",
+                "label_en": "Stopwatch",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_TIMER",
+                "type": "APP_DATA_TYPE_TIMER",
+                "enum": 30,
+                "vmask": 7,
+                "label_cn": "计时器",
+                "label_en": "Timer",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_WORKOUT_RECORD",
+                "type": "APP_DATA_TYPE_WORKOUT_RECORD",
+                "enum": 31,
+                "vmask": 7,
+                "label_cn": "锻炼记录",
+                "label_en": "Workout Record",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_TRAIN_STAUS",
+                "type": "APP_DATA_TYPE_TRAIN_STAUS",
+                "enum": 32,
+                "vmask": 7,
+                "label_cn": "训练状态",
+                "label_en": "Train Status",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_ACTIVE_RECORD",
+                "type": "APP_DATA_TYPE_ACTIVE_RECORD",
+                "enum": 33,
+                "vmask": 7,
+                "label_cn": "活动记录",
+                "label_en": "Active Record",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_BREATHE_TRAINING",
+                "type": "APP_DATA_TYPE_BREATHE_TRAINING",
+                "enum": 34,
+                "vmask": 7,
+                "label_cn": "呼吸训练",
+                "label_en": "Breathe Training",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_CALL_CONTACT",
+                "type": "APP_DATA_TYPE_CALL_CONTACT",
+                "enum": 35,
+                "vmask": 7,
+                "label_cn": "联系人",
+                "label_en": "Call Contact",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_MUSIC",
+                "type": "APP_DATA_TYPE_MUSIC",
+                "enum": 36,
+                "vmask": 7,
+                "label_cn": "音乐",
+                "label_en": "Music",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_COMPASS",
+                "type": "APP_DATA_TYPE_COMPASS",
+                "enum": 37,
+                "vmask": 7,
+                "label_cn": "指南针",
+                "label_en": "Compass",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_CALL_RECORD",
+                "type": "APP_DATA_TYPE_CALL_RECORD",
+                "enum": 38,
+                "vmask": 7,
+                "label_cn": "通话记录",
+                "label_en": "Call Record",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_SPO2",
+                "type": "APP_DATA_TYPE_SPO2",
+                "enum": 40,
+                "vmask": 7,
+                "label_cn": "血氧饱和度",
+                "label_en": "SPO2",
+                "drawTypes": [
+                    "singleRes"
+                ],
+                "valueTypes": null
+            },
+            {
+                "id": "APP_DATA_TYPE_LUNAR_CALENDAR",
+                "type": "APP_DATA_TYPE_LUNAR_CALENDAR",
+                "enum": 41,
+                "vmask": 5,
+                "label_cn": "农历",
+                "label_en": "Lunar calendar",
+                "drawTypes": [
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                    92,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    116
+                ]
+            }
+        ],
+        "connectors": [
+            {
+                "id": "CONN_COLON",
+                "enum": 0,
+                "label_cn": "冒号:",
+                "label_en": "Colon",
+                "vmask": 1,
+                "group": "connector"
+            },
+            {
+                "id": "CONN_STUB",
+                "enum": 1,
+                "label_cn": "短线-",
+                "label_en": "Stub",
+                "vmask": 1,
+                "group": "connector"
+            },
+            {
+                "id": "CONN_SLASH",
+                "enum": 2,
+                "label_cn": "斜线/",
+                "label_en": "Slash",
+                "vmask": 1,
+                "group": "connector"
+            },
+            {
+                "id": "CONN_BACKSLASH",
+                "enum": 3,
+                "label_cn": "反斜线\\",
+                "label_en": "Backslash",
+                "vmask": 1,
+                "group": "connector"
+            },
+            {
+                "id": "CONN_POINT",
+                "enum": 4,
+                "label_cn": "点.",
+                "label_en": "Point",
+                "vmask": 1,
+                "group": "connector"
+            },
+            {
+                "id": "CONN_PERCENT",
+                "enum": 5,
+                "label_cn": "百分号%",
+                "label_en": "Percent",
+                "vmask": 1,
+                "group": "connector"
+            },
+            {
+                "id": "CONN_SPACE",
+                "enum": 6,
+                "label_cn": "空格 ",
+                "label_en": "Space",
+                "vmask": 1,
+                "group": "connector"
+            },
+            {
+                "id": "CONN_DEGREE",
+                "enum": 7,
+                "label_cn": "度数°",
+                "label_en": "Degree",
+                "vmask": 1,
+                "group": "connector"
+            }
+        ],
+        "jumpapp": [11, 13, 15, 16, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36],
+        "aodValueTypes": [4, 9, 12, 13, 17, 50, 51, 52, 53, 54, 59, 60, 61, 62, 70, 71, 73, 92, 93, 94, 248, 150, 151, 153, 
+            155, 156, 163, 231, 232, 233, 253, 255],
+        "aodLayers": ["text", "textTwowild", "singleRes", "selectedRes", "combinedRes", "handRes", "lineRes", "arcRes"],
+        "container": {
+            "index": 0,
+            "id": "container",
+            "type": "container",
+            "label_cn": "容器",
+            "label_en": "Container",
+            "vmask": 0,
+            "properties": {
+                "isSupportOption": false,
+                "rect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 100,
+                    "height": 100
+                },
+                "availableOption": [],
+                "selectedOption": 0,
+                "$path": {
+                    "resName": []
+                }
+            },
+            "dataType": 12,
+            "layers": []
+        },
+        "option": {
+            "index": 0,
+            "id": "option",
+            "type": "option",
+            "label_cn": "自定义选项",
+            "label_en": "Option",
+            "properties": {
+                "$path": {
+                    "resName": [],
+                    "resNameBorder": []
+                }
+            },
+            "dataType": 11,
+            "layers": []
+        },
+        "elements": [
+            {
+                "index": 0,
+                "id": "background",
+                "label_cn": "背景",
+                "label_en": "Background",
+                "vmask": 0,
+                "type": "background",
+                "label": 0,
+                "isSupportOption": false,
+                "$path": {
+                    "resName": []
+                },
+                "layers": [],
+                "drawTypes": [
+                    "singleRes",
+                    "selectedRes"
+                ],
+                "valueTypes": [
+                    86
+                ]
+            },
+            {
+                "index": 0,
+                "id": "time",
+                "label_cn": "时间",
+                "label_en": "Time",
+                "vmask": 0,
+                "type": "time",
+                "label": 1,
+                "isSupportOption": false,
+                "$path": {
+                    "resName": []
+                },
+                "layers": [],
+                "drawTypes": [
+                    "singleRes",
+                    "selectedRes",
+                    "combinedRes",
+                    "text",
+                    "handRes",
+                    "line",
+                    "arc",
+                    "lineRes",
+                    "arcRes"
+                ],
+                "valueTypes": [
+                    12,
+                    13,
+                    14,
+                    24,
+                    25,
+                    50,
+                    59,
+                    60,
+                    61,
+                    62,
+                    153,
+                    63,
+                    64,
+                    154,
+                    150,
+                    151,
+                    233
+                ]
+            },
+            {
+                "index": 0,
+                "id": "date",
+                "label_cn": "日期",
+                "label_en": "Date",
+                "vmask": 0,
+                "type": "date",
+                "label": 2,
+                "isSupportOption": false,
+                "$path": {
+                    "resName": []
+                },
+                "layers": [],
+                "drawTypes": [
+                    "singleRes",
+                    "selectedRes",
+                    "combinedRes",
+                    "text",
+                    "handRes",
+                    "line",
+                    "arc",
+                    "lineRes",
+                    "arcRes",
+                    "textTwowild"
+                ],
+                "valueTypes": [
+                    17,
+                    30,
+                    31,
+                    51,
+                    70,
+                    71,
+                    88,
+                    89,
+                    90,
+                    92,
+                    155,
+                    52,
+                    156,
+                    231,
+                    93,
+                    94,
+                    95,
+                    96,
+                    97,
+                    98,
+                    99,
+                    236,
+                    237,
+                    118,
+                    255,
+                    116
+                ]
+            },
+            {
+                "index": 0,
+                "id": "widget",
+                "label_cn": "控件",
+                "label_en": "Widget",
+                "vmask": 0,
+                "type": "widget",
+                "label": 3,
+                "containers": [],
+                "options": [],
+                "drawTypes": [
+                    "singleRes",
+                    "selectedRes",
+                    "combinedRes",
+                    "text",
+                    "handRes",
+                    "line",
+                    "arc",
+                    "lineRes",
+                    "arcRes",
+                    "textTwowild"
+                ],
+                "valueTypes": null,
+                "invalidValueTypes": [51, 92, 93, 94]
+            }
+        ]
+    },
+    "data": {
+        "elements": [
+            []
+        ],
+        "description": {
+            "title": "",
+            "titleCN": "",
+            "author": "",
+            "designer": "",
+            "screen": "HWHD07",
+            "version": "",
+            "font": "",
+            "fontCN": "",
+            "briefInfo": ""
+        }
+    }
+}
